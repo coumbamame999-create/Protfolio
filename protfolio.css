@@ -12,16 +12,17 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
-    border-bottom: 2px solid #ef9898;
     background-color: maroon;
     align-items: center;
     position: sticky;
+    top: 0;
     margin: 10px auto;
 }
 .logo{
     border: 2px solid #eae0e0;
-    height: 80px;
+    height: 60px;
     width: 6%;
+    min-width: 60px;
     border-radius: 20px;
     margin: auto 20px;
     display: flex;
@@ -33,9 +34,11 @@ nav{
 }
 .lien{
    display: flex;
-   gap: 50px;
+   gap: 20px;
    align-items: center;
    background: none;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 .lien5{
     height: fit-content;
@@ -54,14 +57,16 @@ a:hover{
 .rect{
     display: flex;
     border-radius: 30px;
-    width: 80%;
+    width: 90%;
     background: maroon;
+    max-width: 1200px;
     flex-direction: row;
     gap: 40px;
     padding: 40px;
     margin: 40px auto;
     align-items: center;
     color: white;
+    flex-direction: row;
 }
 .gauche{
     display: flex;
@@ -159,9 +164,10 @@ a:hover{
     text-align: center;
 }
 .rect5 {
-    width: 320px;
+    width: 30%;
     flex-shrink: 0; 
     background: none;
+    max-width: 1200px;
 }
 .rect5 img {
     width: 100%;
@@ -179,12 +185,8 @@ a:hover{
     text-align: center;
 }
 .quatre{
-    display: grid;
-    gap: 20px; 
     grid-template-columns: repeat(2,1fr);
     padding: 0 40px;
-    max-width: 1200px;
-    margin: 20px auto;
 }
 .Q{
    border: maroon solid 3px;
@@ -198,13 +200,8 @@ a:hover{
    height: auto;
 }
 .block{
-
-    display: grid;
-    gap: 10px; 
     grid-template-columns: repeat(3,1fr);
     padding: 0 40px; 
-    max-width: 1200px;
-    margin: 20px auto;
 }
 .B6{
   border: maroon solid 3px;
@@ -304,13 +301,29 @@ footer p{
     color: #800000;
    text-align: center;
 }
+.quatre, .block {
+    display: grid;
+    width: 95%; 
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+} 
 @media (max-width: 1024px) {
-    .logo {
-        width: 60px;
-    }
     .rect {
         width: 90%;
         gap: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .rect5 {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .rect1 {
+        margin: 0 auto;
+    }
+    .rect3 {
+        justify-content: center;
     }
     .block {
         grid-template-columns: repeat(2, 1fr);
@@ -323,21 +336,27 @@ footer p{
         width: fit-content;
     }
 }
+
 @media (max-width: 768px) {
     nav {
-        padding: 10px 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
     }
     .logo {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
     .lien {
-        gap: 15px;
+        gap: 10px;
+        justify-content: center;
     }
     .rect {
-        flex-direction: column;
         width: 95%;
         padding: 20px;
+    }
+    .rect2 h1 {
+        font-size: 1.8rem;
     }
     .rect5 {
         width: 100%;
@@ -358,10 +377,10 @@ footer p{
         align-items: center;
     }
     .S4 {
-        width: 80%;
+        width: 100%;
     }
     .foote {
-        width: 90%;
+        width: 95%;
         padding: 20px;
     }
     .rect3 {
@@ -369,7 +388,7 @@ footer p{
         flex-direction: column;
         gap: 10px;
     }
-    .btnn1, .btnn2 {
+    .btnn1, .btnn2, .btn1, .btn2 {
         width: 100%;
     }
 }
