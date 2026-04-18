@@ -8,6 +8,9 @@ body {
     background-color: #ffeeee;
     color: #1F1F1F;
 }
+html{
+    scroll-behavior: smooth;
+}
 nav{
     display: flex;
     justify-content: space-between;
